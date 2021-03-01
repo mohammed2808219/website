@@ -1,0 +1,608 @@
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hover-opacity {
+    transition: opacity 0.8s;
+}
+
+.hover-opacity:hover {
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+.ltr-effect {
+    position: relative;
+}
+
+.ltr-effect:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #333;
+    z-index: -1;
+    transition: width 0.5s;
+}
+
+.ltr-effect:hover:after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: montserrat, sans-serif;
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.section-header .line {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #6195ff;
+    margin: 0 auto 70px auto;
+}
+
+.header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav>li {
+    display: inline-block;
+    text-align: right;
+}
+
+.header .nav>li>a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 30px 15px;
+    font-size: 15px;
+    transition: font-size 0.5s;
+}
+
+.header .nav>li>a:hover {
+    font-size: 18px;
+    transition: font-size 0.5s;
+}
+
+.header .nav>li>a.active:after,
+.header .nav>li>a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: #6195ff;
+    transition: 0.5s;
+}
+
+.header .nav>li>a.active:after {
+    width: 100%;
+}
+
+.header .nav>li>a:hover:after {
+    width: 100%;
+}
+
+.header .nav>li>a:after {
+    width: 0;
+}
+
+.home {
+    height: 100vh;
+    background-image: url(../images/background/background3.webp);
+    background-size: cover;
+    position: relative;
+}
+
+.home-content {
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home .title {
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.home .home-desc {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 15px 0;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+.home .btn:hover {
+    font-size: 20px;
+}
+
+.home .btn-start {
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.home .btn-learn {
+    background-color: #6195ff;
+    color: #fff;
+}
+
+.about-item {
+    float: left;
+    width: 30%;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-item:hover .about-item-title {
+    color: white;
+    transition: color 0.5s;
+}
+
+.about-item-title {
+    text-transform: capitalize;
+    font-family: 'Varela Round', sans-serif;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+}
+
+.about-item .icon {
+    color: #6195ff;
+    margin-bottom: 10px;
+}
+
+.about-item-desc {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.about-item-link {
+    color: #6195ff;
+    text-transform: capitalize;
+}
+
+.about-item.mg {
+    margin: 0 5%;
+    margin-top: 10%;
+}
+
+.about-item.r {
+    margin-top: 20%;
+}
+
+.portfolio {
+    background-color: #f9f9f9;
+}
+
+.portfolio-item {
+    float: left;
+    width: 32%;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 20px;
+}
+
+.portfolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio-item.mg {
+    margin: 0 2%;
+    margin-top: 10%;
+}
+
+.portfolio-item.r {
+    margin-top: 20%;
+}
+
+.layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+.layer-content .layer-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+.category {
+    color: #6195ff;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.2s;
+}
+
+.layer-content-title {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3s;
+}
+
+.layer-content a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.4s;
+}
+
+.layer-content a i {
+    line-height: 40px;
+}
+
+.portfolio-item:hover .category,
+.portfolio-item:hover .layer-content-title,
+.portfolio-item:hover .layer-content a {
+    top: 0px;
+    transition: 1s;
+}
+
+.offer-item {
+    float: left;
+    width: 30%;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 25px;
+    padding: 30px 15px 30px 70px;
+    position: relative;
+}
+
+.offer-item.mg {
+    margin: 0 5%;
+    margin-top: 10%;
+}
+
+.offer-item.r {
+    margin-top: 20%;
+}
+
+.offer-item .icon {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    color: #6195ff;
+}
+
+.offer-item-title {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: color 0.5s;
+}
+
+.offer-item-desc {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #999;
+}
+
+.offer-item:hover .offer-item-title {
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.team-item {
+    width: 30%;
+    background: #e8e8e8;
+    padding: 40px 10px;
+    text-align: center;
+    float: none;
+    margin-left: 35%;
+}
+
+.team-item .team-img {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.team-overlay a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #7ba7ff;
+    color: #fff;
+    margin-left: auto;
+}
+
+.team-overlay a i {
+    line-height: 40px;
+}
+
+.team-item .team-img img {
+    width: 100%
+}
+
+.team-item .team-info-title {
+    color: #222;
+    margin: 10px 0;
+}
+
+.team-item .team-info-text {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.team-item:hover .team-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer {
+    background: #333;
+    height: 300px;
+    text-align: center;
+}
+
+.footer-img {
+    margin-top: 50px;
+}
+
+.footer .icon {
+    margin-top: 30px;
+    width: 50px;
+    background: #6195ff;
+    color: #fff;
+    line-height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999;
+}
+
+@media screen and (max-width: 800px) {
+    .about-item {
+        width: 100%;
+    }
+    .offer-item {
+        width: 100%;
+    }
+    .team-item {
+        width: 100%;
+    }
+    .portfolio-item {
+        width: 100%;
+    }
+    .header {
+        display: none;
+    }
+    .footer .icon {
+        width: 40px;
+    }
+    .home .btn {
+        margin: 10px;
+        padding: 10px;
+    }
+    .home {
+        height: 110vh;
+        text-align: center;
+    }
+    .home .title {
+        font-size: 3rem;
+    }
+    .team-item {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #floatingMenu {
+        display: none;
+    }
+}
+
+#floatingMenu img {
+    position: absolute;
+    width: 40px;
+    float: left;
+    z-index: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 30%;
+}
+
+.sidenav {
+    opacity: 0.6;
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
